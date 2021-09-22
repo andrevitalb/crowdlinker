@@ -7,8 +7,14 @@ import signup from './pages/signup';
 
 // Util
 import AuthRoute from './util/AuthRoute';
+
+// Redux
+import { Provider } from 'react-redux';
+import store from './redux/store';
+
 const App = () => {
 	return (
+		<Provider store={store}>
 			<Router>
 				<Navbar />
 				<section className="mainApp">
@@ -19,6 +25,7 @@ const App = () => {
 					</Switch>
 				</section>
 			</Router>
+		</Provider>
 	);
 };
 
