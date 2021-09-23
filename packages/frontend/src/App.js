@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import RouteController from './util/RouteController';
 
 // Pages
 import home from './pages/home';
@@ -14,18 +15,32 @@ import store from './redux/store';
 
 const App = () => {
 	return (
-		<Provider store={store}>
-			<Router>
-				<Navbar />
-				<section className="mainApp">
-					<Switch>
-						<Route exact path="/" component={home} />
-						<AuthRoute exact path="/login" component={login} />
-						<AuthRoute exact path="/signup" component={signup} />
-					</Switch>
-				</section>
-			</Router>
-		</Provider>
+			<Provider store={store}>
+				<Router>
+					<section className="mainApp">
+						<Switch>
+							<RouteController
+								exact
+								path="/"
+								component={home}
+								routeType={'protected'}
+							/>
+							<RouteController
+								exact
+								path="/login"
+								component={login}
+								routeType={'auth'}
+							/>
+							<RouteController
+								exact
+								path="/signup"
+								component={signup}
+								routeType={'auth'}
+							/>
+						</Switch>
+					</section>
+				</Router>
+			</Provider>
 	);
 };
 
