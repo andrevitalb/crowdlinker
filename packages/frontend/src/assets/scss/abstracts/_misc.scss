@@ -1,0 +1,41 @@
+.text {
+	&-white {
+		color: #fff !important;
+	}
+
+	&-black {
+		color: #000 !important;
+	}
+
+	&-semi-bold {
+		font-weight: 600 !important;
+	}
+
+	&-bold {
+		font-weight: 700 !important;
+	}
+
+	&-uppercase {
+		text-transform: uppercase !important;
+	}
+
+	&-center {
+		text-align: center !important;
+	}
+
+	&-right {
+		text-align: right !important;
+	}
+
+	&-striked {
+		text-decoration: line-through !important;
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+.v-hidden {
+	visibility: hidden;
+}
