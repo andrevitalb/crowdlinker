@@ -1,0 +1,22 @@
+@import '../../assets/scss/abstracts/mixins';
+
+.articles {
+	&__container {
+		padding: 5vh 5vw;
+	}
+
+	&__header {
+		@include flex-between;
+		margin-bottom: 1.5rem !important;
+	}
+
+	&__article {
+		&__container {
+			padding: 1rem;
+		}
+
+		&__title {
+			margin-bottom: 0.5rem !important;
+		}
+	}
+}
