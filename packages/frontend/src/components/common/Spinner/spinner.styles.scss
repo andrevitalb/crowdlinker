@@ -1,0 +1,7 @@
+@import '../../../assets/scss/abstracts/mixins';
+
+.spinner {
+	&__container {
+		@include flex-center;
+	}
+}
