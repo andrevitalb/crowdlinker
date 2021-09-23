@@ -1,7 +1,14 @@
 import React from 'react';
 
-const Signup = () => {
-	return <section className="signup"></section>;
+// Components
+import SignupForm from '../components/Form/SignupForm';
+
+const SignUp = () => {
+	return (
+		<section className="signup">
+			<SignupForm />
+		</section>
+	);
 };
 
-export default Signup;
+export default SignUp;
