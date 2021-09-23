@@ -6,8 +6,8 @@ import home from './pages/home';
 import login from './pages/login';
 import signup from './pages/signup';
 
-// Util
-import AuthRoute from './util/AuthRoute';
+// Components
+import Navbar from './components/Navbar/';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -22,6 +22,7 @@ const App = () => {
 		<ThemeProvider theme={theme}>
 			<Provider store={store}>
 				<Router>
+					<Navbar />
 					<section className="mainApp">
 						<Switch>
 							<RouteController
