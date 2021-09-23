@@ -1,0 +1,14 @@
+@import '../../assets/scss/abstracts/mixins';
+
+.form {
+	@include flex-center;
+	flex-direction: column;
+
+	&__container {
+		padding: 3rem 1.5rem;
+	}
+
+	&__title {
+		margin-bottom: 1.5rem !important;
+	}
+}
