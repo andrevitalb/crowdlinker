@@ -1,9 +1,48 @@
+@import './assets/scss/abstracts/mixins';
+@import './assets/scss/abstracts/misc';
+
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 }
 
 html {
 	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #ededed;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: 'Open Sans', sans-serif;
+
+	@include breakpoint($md) {
+		padding-bottom: 0;
+	}
+}
+
+a {
+	@include baseTransition(0.25s);
+	text-decoration: none;
+}
+
+input,
+button {
+	border: none;
+	outline: none;
+	@include baseTransition(0.2s);
+}
+
+button {
+	cursor: pointer;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+::selection {
+	background-color: #fc544c;
+	color: #fff;
 }
