@@ -1,8 +1,8 @@
 # CrowdLinker Coding challenge
 
-The crowdlinker project consists of two sub-packages which each run a server. There is a **backend** API server, and a **frontend** server that serves React code.
+The crowdlinker project consists of two sub-packages which each run a server. There is a **backend** API server, which is Node based, using Google's Firebase Firestore, Authentication & Cloud Functions, and a **frontend** server that serves React code.
 
-This was done completely by [André Vital](https://github.com/andrevitalb)
+This project was done completely by [André Vital](https://github.com/andrevitalb)
 
 ## Getting started
 
