@@ -12,9 +12,14 @@ import AuthRoute from './util/AuthRoute';
 // Redux
 import { Provider } from 'react-redux';
 import store from './redux/store';
+// Theme
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import themeValues from './util/theme';
+const theme = createTheme(themeValues);
 
 const App = () => {
 	return (
+		<ThemeProvider theme={theme}>
 			<Provider store={store}>
 				<Router>
 					<section className="mainApp">
@@ -41,6 +46,7 @@ const App = () => {
 					</section>
 				</Router>
 			</Provider>
+		</ThemeProvider>
 	);
 };
 
